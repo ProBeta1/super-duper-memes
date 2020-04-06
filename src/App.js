@@ -1,26 +1,204 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Meme from "./components/Meme";
+import ReactPlayer from "react-player";
+import "./styles/tailwind.css";
+import { scaleRotate as Menu } from "react-burger-menu";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+class App extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      firstMusic: "https://www.youtube.com/watch?v=-ThId6ZWqsE",
+      secondMusic: "https://www.youtube.com/watch?v=3n9rDwpa6QA",
+      thirdMusic: "https://www.youtube.com/watch?v=mIxlvVlOIS0",
+      fourthMusic: "https://www.youtube.com/watch?v=EP_CDtyV41g",
+      fifthMusic: "https://www.youtube.com/watch?v=hmE9f-TEutc",
+      backVideoUrl: "https://www.youtube.com/watch?v=_z-1fTlSDF0",
+    };
+  }
+
+  setBTS = () => {
+    this.setState({
+      firstMusic: "https://www.youtube.com/watch?v=6gQcUWWY2qA",
+      secondMusic: "https://www.youtube.com/watch?v=MBdVXkSdhwU",
+      thirdMusic: "https://www.youtube.com/watch?v=-ThId6ZWqsE",
+      fourthMusic: "https://www.youtube.com/watch?v=bIv16itYi_0",
+      fifthMusic: "https://www.youtube.com/watch?v=5Wn85Ge22FQ",
+      backVideoUrl: "https://www.youtube.com/watch?v=cbSy36fu6Pk",
+    });
+  };
+
+  setTwice = () => {
+    this.setState({
+      firstMusic: "https://www.youtube.com/watch?v=3ymwOvzhwHs",
+      secondMusic: "https://www.youtube.com/watch?v=3n9rDwpa6QA",
+      thirdMusic: "https://www.youtube.com/watch?v=CMNahhgR_ss",
+      fourthMusic: "https://www.youtube.com/watch?v=c7rCyll5AeY",
+      fifthMusic: "https://www.youtube.com/watch?v=0rtV5esQT6I",
+      backVideoUrl: "https://www.youtube.com/watch?v=3n9rDwpa6QA",
+    });
+  };
+
+  setWalker = () => {
+    this.setState({
+      firstMusic: "https://www.youtube.com/watch?v=WWCsGEarExg&t=22s",
+      secondMusic: "https://www.youtube.com/watch?v=dhYOPzcsbGM",
+      thirdMusic: "https://www.youtube.com/watch?v=hmE9f-TEutc",
+      fourthMusic: "https://www.youtube.com/watch?v=-Ed-GNq2EyU",
+      fifthMusic: "https://www.youtube.com/watch?v=M-P4QBt-FWw",
+      backVideoUrl: "https://www.youtube.com/watch?v=mIxlvVlOIS0",
+    });
+  };
+
+  setScore = () => {
+    this.setState({
+      firstMusic: "https://www.youtube.com/watch?v=b99r48grKGI",
+      secondMusic: "https://www.youtube.com/watch?v=jecQcgbyetw",
+      thirdMusic: "https://www.youtube.com/watch?v=cNld-AHw-Wg",
+      fourthMusic: "https://www.youtube.com/watch?v=i3ucSSVJTL4",
+      fifthMusic: "https://www.youtube.com/watch?v=XclXvB1Gmnc",
+      backVideoUrl: "https://www.youtube.com/watch?v=EP_CDtyV41g",
+    });
+  };
+
+  render() {
+    return (
+      <div className="App" id="outer-container">
+        <div className="video-background " id="page-wrap">
+          <div className="video-foreground">
+            <ReactPlayer
+              className="video-iframe"
+              url={this.state.backVideoUrl}
+              playing={true}
+              width="100%"
+              height="100%"
+              muted={true}
+              loop={true}
+            />
+          </div>
+        </div>
+
+        <Menu
+          width={700}
+          right
+          pageWrapId={"page-wrap"}
+          outerContainerId={"outer-container"}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+          <div className="flex justify-center items-center ">
+            <button
+              onClick={this.setBTS}
+              className="mx-10 bg-pink-600 rounded-lg border-pink-500 hover:bg-blue-700 p-4 m-2 font-bold hover:text-gray-200"
+            >
+              <img
+                className="w-16 h-16"
+                src="https://pm1.narvii.com/6907/a249d687dde15bd9e8a075afa6bf6b63c1da6e7br1-1417-1384v2_hq.jpg"
+                alt="BTS"
+              ></img>
+            </button>
+
+            <button
+              onClick={this.setTwice}
+              className="mx-10 bg-purple-700 rounded-lg border-pink-500 hover:bg-orange-500 p-4 m-2 font-bold hover:text-gray-200"
+            >
+              <img
+                className="w-16 h-16"
+                src="https://cdn130.picsart.com/265496243012212.png?type=webp&to=min&r=640"
+                alt="Twice"
+              ></img>
+            </button>
+
+            <button
+              onClick={this.setWalker}
+              className="mx-10 bg-pink-600 rounded-lg border-pink-500 hover:bg-blue-700 p-4 m-2 font-bold hover:text-gray-200"
+            >
+              <img
+                className="w-16 h-16"
+                src="https://www.pngitem.com/pimgs/m/66-669362_transparent-walker-png-alan-walker-logo-vector-png.png"
+                alt="Walker"
+              ></img>
+            </button>
+
+            <button
+              onClick={this.setScore}
+              className="ml-10 bg-purple-500 rounded-lg border-pink-500 hover:bg-orange-400 p-4 m-2 font-bold hover:text-gray-200"
+            >
+              <img
+                className="w-16 h-16"
+                src="https://pbs.twimg.com/profile_images/1035569260267954176/PPiidCm__400x400.jpg"
+                alt="Score"
+              ></img>
+            </button>
+          </div>
+
+          <div className="flex-wrap justify-center items-end">
+            <div className="bg-indigo-500 border-4 rounded-full border-gray-100 text-4xl font-bold font-mono mt-12 align-center flex justify-center text-gray-200 leading-relaxed hover:bg-indigo-400 hover:text-gray-800">
+              ^ Music PlayList ^
+            </div>
+
+            <div className="mt-16 flex">
+              <ReactPlayer
+                className="my-4"
+                url={this.state.firstMusic}
+                controls={true}
+                height={100}
+              />
+            </div>
+
+            <div className="flex">
+              <ReactPlayer
+                className="my-4"
+                url={this.state.secondMusic}
+                controls={true}
+                height={100}
+              />
+            </div>
+
+            <div className="flex">
+              <ReactPlayer
+                className="my-4"
+                url={this.state.thirdMusic}
+                controls={true}
+                height={100}
+              />
+            </div>
+
+            <div className="flex">
+              <ReactPlayer
+                className="my-4"
+                url={this.state.fourthMusic}
+                controls={true}
+                height={100}
+              />
+            </div>
+
+            <div className="flex">
+              <ReactPlayer
+                className="my-4"
+                url={this.state.fifthMusic}
+                controls={true}
+                height={100}
+              />
+            </div>
+          </div>
+          <div className="flex justify-end">
+            <div className="text-2xl font-bold text-white font-serif bg-gray-800 tracking-wide text-right">
+              ~ Made with loads of
+              <span className="text-red-500 mx-2">&hearts;</span> by probeta ~
+              &nbsp;
+            </div>
+          </div>
+        </Menu>
+
+        <div
+          className="w-screen h-screen  flex justify-between items-center px-16"
+          id="page-wrap"
+        >
+          <Meme />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
