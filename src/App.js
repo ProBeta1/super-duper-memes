@@ -25,7 +25,7 @@ class App extends React.Component {
       thirdMusic: "https://www.youtube.com/watch?v=-ThId6ZWqsE",
       fourthMusic: "https://www.youtube.com/watch?v=bIv16itYi_0",
       fifthMusic: "https://www.youtube.com/watch?v=5Wn85Ge22FQ",
-      backVideoUrl: "https://www.youtube.com/watch?v=cbSy36fu6Pk",
+      backVideoUrl: "https://www.youtube.com/watch?v=Lv3yF_IgXEE",
     });
   };
 
@@ -66,9 +66,10 @@ class App extends React.Component {
     return (
       <div className="App" id="outer-container">
         <div className="video-background " id="page-wrap">
-          <div className="video-foreground">
+
+          <div className="video-foreground" id="overlay">
             <ReactPlayer
-              className="video-iframe"
+              className="video-iframe opacity-50"
               url={this.state.backVideoUrl}
               playing={true}
               width="100%"
