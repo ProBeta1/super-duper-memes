@@ -72,6 +72,8 @@ class Meme extends React.Component {
             <img
               src={this.state.pictures}
               alt="Please refresh the page if no meme is showing up"
+              max-width="100%"
+              max-height="100%"
             />
           }
         </div>
