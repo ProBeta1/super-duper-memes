@@ -17,7 +17,7 @@ class Meme extends React.Component {
   }
 
   getData = () => {
-    fetch("https://meme-api.herokuapp.com/gimme/100")
+    fetch("https://cors-anywhere.herokuapp.com/meme-api.herokuapp.com/gimme/100")
       .then((results) => {
         return results.json();
       })
