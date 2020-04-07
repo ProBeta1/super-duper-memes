@@ -14,7 +14,7 @@ class App extends React.Component {
       thirdMusic: "https://www.youtube.com/watch?v=mIxlvVlOIS0",
       fourthMusic: "https://www.youtube.com/watch?v=EP_CDtyV41g",
       fifthMusic: "https://www.youtube.com/watch?v=hmE9f-TEutc",
-      backVideoUrl: "https://www.youtube.com/watch?v=_z-1fTlSDF0",
+      backVideoUrl: "https://www.youtube.com/watch?v=9zJnlIgavUI",
     };
   }
 
@@ -81,15 +81,16 @@ class App extends React.Component {
         </div>
 
         <Menu
-          width={700}
+          width={"30%"}
           right
           pageWrapId={"page-wrap"}
           outerContainerId={"outer-container"}
         >
-          <div className="flex justify-center items-center ">
+          <div className="flex-wrap justify-between items-center">
+            <div className="flex w-full justify-center">
             <button
               onClick={this.setBTS}
-              className="mx-10 bg-pink-600 rounded-lg border-pink-500 hover:bg-blue-700 p-4 m-2 font-bold hover:text-gray-200"
+              className="bg-pink-600 rounded-lg border-pink-500 hover:bg-blue-700 p-1 m-1 xl:p-4 xl:m-4 font-bold hover:text-gray-200"
             >
               <img
                 className="w-16 h-16"
@@ -97,10 +98,12 @@ class App extends React.Component {
                 alt="BTS"
               ></img>
             </button>
-
+            </div>
+            
+            <div className="flex w-full justify-center">
             <button
               onClick={this.setTwice}
-              className="mx-10 bg-purple-700 rounded-lg border-pink-500 hover:bg-orange-500 p-4 m-2 font-bold hover:text-gray-200"
+              className=" bg-purple-700 rounded-lg border-pink-500 hover:bg-orange-500 p-1 m-1 xl:p-4 xl:m-4 font-bold hover:text-gray-200"
             >
               <img
                 className="w-16 h-16"
@@ -108,10 +111,12 @@ class App extends React.Component {
                 alt="Twice"
               ></img>
             </button>
+            </div>
 
+            <div className="flex w-full justify-center">
             <button
               onClick={this.setWalker}
-              className="mx-10 bg-pink-600 rounded-lg border-pink-500 hover:bg-blue-700 p-4 m-2 font-bold hover:text-gray-200"
+              className=" bg-pink-600 rounded-lg border-pink-500 hover:bg-blue-700 p-1 m-1 xl:p-4 xl:m-4 font-bold hover:text-gray-200"
             >
               <img
                 className="w-16 h-16"
@@ -119,10 +124,12 @@ class App extends React.Component {
                 alt="Walker"
               ></img>
             </button>
+            </div>
 
+            <div className="flex w-full justify-center">
             <button
               onClick={this.setScore}
-              className="ml-10 bg-purple-500 rounded-lg border-pink-500 hover:bg-orange-400 p-4 m-2 font-bold hover:text-gray-200"
+              className="bg-purple-500 md:rounded-lg border-pink-500 hover:bg-orange-400 p-1 m-1 xl:p-4 xl:m-4 font-bold hover:text-gray-200"
             >
               <img
                 className="w-16 h-16"
@@ -130,16 +137,18 @@ class App extends React.Component {
                 alt="Score"
               ></img>
             </button>
+            </div>
+
           </div>
 
           <div className="flex-wrap justify-center items-end">
-            <div className="bg-indigo-500 border-4 rounded-full border-gray-100 text-4xl font-bold font-mono mt-12 align-center flex justify-center text-gray-200 leading-relaxed hover:bg-indigo-400 hover:text-gray-800">
-              ^ Music PlayList ^
+            <div className="bg-indigo-500 border-1 md:border-2 md:rounded-sm lg:border-4 lg:rounded-full border-gray-100 text-xs text-center sm:text-base md:text-lg lg:text-xl xl:text-4xl font-bold font-mono md:mt-6 mt-2 lg:mt-10 align-center flex justify-center text-gray-200 leading-relaxed hover:bg-orange-300 hover:text-teal-700">
+              ^Music PlayList^
             </div>
 
-            <div className="mt-16 flex">
+            <div className="mt-4 md:mt-8 xl:mt-12 flex">
               <ReactPlayer
-                className="my-4"
+                className="my-1 md:my-2 lg:my-4"
                 url={this.state.firstMusic}
                 controls={true}
                 height={100}
@@ -148,7 +157,7 @@ class App extends React.Component {
 
             <div className="flex">
               <ReactPlayer
-                className="my-4"
+                className="my-1 md:my-2 lg:my-4"
                 url={this.state.secondMusic}
                 controls={true}
                 height={100}
@@ -157,7 +166,7 @@ class App extends React.Component {
 
             <div className="flex">
               <ReactPlayer
-                className="my-4"
+                className="my-1 md:my-2 lg:my-4"
                 url={this.state.thirdMusic}
                 controls={true}
                 height={100}
@@ -166,7 +175,7 @@ class App extends React.Component {
 
             <div className="flex">
               <ReactPlayer
-                className="my-4"
+                className="my-1 md:my-2 lg:my-4"
                 url={this.state.fourthMusic}
                 controls={true}
                 height={100}
@@ -175,7 +184,7 @@ class App extends React.Component {
 
             <div className="flex">
               <ReactPlayer
-                className="my-4"
+                className="my-1 md:my-2 lg:my-4"
                 url={this.state.fifthMusic}
                 controls={true}
                 height={100}
@@ -183,16 +192,16 @@ class App extends React.Component {
             </div>
           </div>
           <div className="flex justify-end">
-            <div className="text-2xl font-bold text-white font-serif bg-gray-800 tracking-wide text-right">
+            <div className="text-sm lg:text-lg xl:text-2xl font-bold text-white font-serif bg-gray-800 md:tracking-wide text-center md:text-right">
               ~ Made with loads of
-              <span className="text-red-500 mx-2">&hearts;</span> by probeta ~
+              <span className="text-red-500 md:mx-2">&hearts;</span> by probeta ~
               &nbsp;
             </div>
           </div>
         </Menu>
 
         <div
-          className="w-screen h-screen  flex justify-between items-center px-16"
+          className="w-screen h-screen  flex justify-between items-center md:px-8 lg:px-16"
           id="page-wrap"
         >
           <Meme />
