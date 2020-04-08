@@ -14,7 +14,7 @@ class Meme extends React.Component {
 
   componentDidMount() {
     this.getData();
-    setInterval(this.updateMeme, 5000);
+    setInterval(this.updateMeme, 10000);
   }
 
   getData = () => {
