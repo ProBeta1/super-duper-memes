@@ -1,10 +1,11 @@
 import React from "react";
+import poster from "./poster.png";
 
 class Meme extends React.Component {
   constructor() {
     super();
     this.state = {
-      pictures:"https://photos.google.com/share/AF1QipNHNJQf1ZSJUcfoSXpOzqIf_JWJ7iHZaGZf8HQEDy6LM6YHWKIwDw69T7xJrgY-DQ/photo/AF1QipPc1Ai_TFdPCfpllOGzmDJ5w8CuLWKpJCdXZFfi?key=aWI1bHB6bm5lWFM5VElqVXJmUEthRkc5Vlhhd2Z3",
+      pictures:poster,
       memes: [],
       newMemes: [],
       count: 0,
@@ -63,15 +64,13 @@ class Meme extends React.Component {
   }
 
   render() {
-    //console.log(this.state.newMemes);
-
     return (
       <div className="bg-orange-300 md:border-4 border-purple-400 rounded-sm md:rounded-lg ml-2 md:ml-8 lg:ml-16 hover:border-8 hover:border-purple-800 hover:rounded-full">
         <div className="bg-blue-400 hover:bg-gray-400 max-w-sm sm:max-w-md md:max-w-lg max-h-sm sm:max-h-md md:max-h-lg ">
           {
             <img
               src={this.state.pictures}
-              alt="Please refresh the page if no meme is showing up"
+              alt="Hold Up Tight ! God has perfect timing; never early, never late."
               max-width="100%"
               max-height="100%"
             />
