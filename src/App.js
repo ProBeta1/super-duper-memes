@@ -85,6 +85,7 @@ class App extends React.Component {
           right
           pageWrapId={"page-wrap"}
           outerContainerId={"outer-container"}
+          disableAutoFocus
         >
           <div className="flex-wrap justify-between items-center">
             <div className="flex w-full justify-center">
