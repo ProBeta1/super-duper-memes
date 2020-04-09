@@ -144,7 +144,7 @@ class App extends React.Component {
 
           <div className="flex-wrap justify-center items-end">
             <div className="bg-indigo-500 border-1 md:border-2 md:rounded-sm lg:border-4 lg:rounded-full border-gray-100 text-xs text-center sm:text-base md:text-lg lg:text-xl xl:text-4xl font-bold font-mono md:mt-6 mt-2 lg:mt-10 align-center flex justify-center text-gray-200 leading-relaxed hover:bg-orange-300 hover:text-teal-700">
-              ^Music PlayList^
+              ^Music PlayList - Tap on your fav band^
             </div>
 
             <div className="mt-4 md:mt-8 xl:mt-12 flex">
